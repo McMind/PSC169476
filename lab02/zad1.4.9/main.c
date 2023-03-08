@@ -29,4 +29,5 @@ int nwd(int n, int m)
         wieksza = mniejsza;
         mniejsza = reszta;
     }
+    return -1;
 }
