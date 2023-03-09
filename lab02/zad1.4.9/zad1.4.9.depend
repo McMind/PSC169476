@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1678265370 source:c:\users\mcmind\github\mcmind\psc169476\lab02\zad1.4.9\main.c
-	<stdio.h>
-	<stdlib.h>
-	<windef.h>
-
