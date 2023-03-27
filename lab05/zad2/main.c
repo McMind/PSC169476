@@ -15,7 +15,8 @@ int p2(int a)
 int main()
 {
     int wynik = suma_wartosci(p1,p2,4);
-    printf("%d",wynik);
+    int wynik2 = suma_wartosci(p2,p2,5);
+    printf("%d\n%d\n",wynik,wynik2);
     return 0;
 }
 
