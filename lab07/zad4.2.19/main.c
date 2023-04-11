@@ -11,13 +11,13 @@ int * przepisz(int n, int * tab)
             ilosc_0++;
         }
     }
-    ilosc_0 = 0;
     int * tab2 = malloc((n-ilosc_0)*sizeof(int));
+    int m = 0;
     for(int i = 0; i < n; i++)
     {
         if(*(tab + i) != 0)
         {
-            *(tab2 + ilosc_0++) = *(tab + i);
+            *(tab2 + m++) = *(tab + i);
         }
     }
     return tab2;
