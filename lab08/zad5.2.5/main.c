@@ -2,9 +2,11 @@
 #include <stdlib.h>
 
 void przepisz(char * tab1, char * tab2){
-    for (int i = 0; tab1[i] != 0; i++){
+    int i;
+    for (i = 0; tab1[i]; i++){
         tab2[i] = tab1[i];
     }
+    tab2[i] = 0;
 }
 
 int main()

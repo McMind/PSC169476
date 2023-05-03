@@ -12,6 +12,7 @@ void sklej(char * tab1, char * tab2, char * tab3)
     {
         tab3[j++] = tab2[i];
     }
+    tab3[j] = 0;
 }
 
 int main()
