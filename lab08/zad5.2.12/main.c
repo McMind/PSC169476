@@ -5,7 +5,7 @@ void wytnijzn(char * nap1, char * nap2);
 
 int czy_nie_istnieje(char znak, char * ciag);
 
-void przesun_o_jeden_w_lewo(int a, char * nap);
+void przesun_o_jeden_w_lewo(int i, char * nap, int * j);
 
 int main()
 {
@@ -19,12 +19,15 @@ int main()
 
 void wytnijzn(char * nap1, char * nap2)
 {
-    for(int i = 0; nap1[i]; i++)
+    int j = 0, i;
+    for(i = 0; nap1[i]; i++)
     {
-        if(czy_nie_istnieje(nap1[i],nap2)){
-            przesun_o_jeden_w_lewo(i--,nap1);
+        if(czy_nie_istnieje(nap1[i],nap2))
+        {
+            przesun_o_jeden_w_lewo(i--,nap1,&j);
         }
     }
+    nap1[i-j] = 0;
 }
 
 int czy_nie_istnieje(char znak, char * ciag)
@@ -39,11 +42,28 @@ int czy_nie_istnieje(char znak, char * ciag)
     return 1; //znak nie istnieje
 }
 
-void przesun_o_jeden_w_lewo(int i, char * nap)
+void przesun_o_jeden_w_lewo(int i, char * nap, int * j)
 {
     while(nap[i])
     {
-        nap[i] = nap[i + 1];
-        i++;
+        int y = 1;
+        for(int k = 0; k <= *j; k++)
+        {
+            if(nap[i + k + 1] == 0)
+            {
+                y = 0;
+                break;
+            }
+        }
+        if(y)
+        {
+            nap[i] = nap[i + 1];
+            i++;
+        }
+        else
+        {
+            break;
+        }
     }
+    *j += 1;
 }

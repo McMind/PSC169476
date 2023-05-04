@@ -20,6 +20,10 @@ void wytnij(char * napis, int n, int m)
         napis[n] = 0;
         return;
     }
+    if(n == 0)
+    {
+        napis[m] = 0;
+    }
     for (int i = n; i <= dlu; i++)
     {
         napis[i] = napis[i + roz];
@@ -30,7 +34,7 @@ void wytnij(char * napis, int n, int m)
 int main()
 {
     char t1[] = "olsztynnnn";
-    wytnij(t1,2,4);
+    wytnij(t1,0,5);
     printf("%s.",t1);
     return 0;
 }
