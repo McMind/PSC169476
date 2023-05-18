@@ -12,7 +12,7 @@ struct Laptop initLaptop(char model[30], float cena){
     wynik.cena = cena;
     strcpy(wynik.model,model);
     return wynik;
-};
+}
 
 void pokazLaptop(struct Laptop a){
     printf("Model: %s, cena: %7.2fzł\n", a.model, a.cena);
